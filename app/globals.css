@@ -2,19 +2,11 @@
 
 :root {
   --background: #ffffff;
-  --foreground: #171717;
-}
-
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --foreground: #111111;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
     --foreground: #ededed;
   }
 }
@@ -23,4 +15,50 @@ body {
   background: var(--background);
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
+  overflow-x: hidden;
+}
+
+/* -------------------------------
+   Dropdown Hover Persistence 
+-------------------------------- */
+
+/* Wrap dropdown in .hoverable to enable hover-persistence */
+/* Hoverable Wrapper */
+.hoverable {
+  position: relative;
+  display: inline-block;
+}
+
+.hoverable-content {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  display: none;
+  background-color: white;
+  border: 1px solid #e5e7eb;
+  min-width: 12rem;
+  z-index: 50;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.hoverable:hover .hoverable-content {
+  display: block;
+}
+
+
+/* Optional: smooth fade in for each link */
+.hoverable-content a {
+  display: block;
+  padding: 0.5rem 1rem;
+  font-size: 0.875rem;
+  color: #374151;
+  /* Tailwind text-gray-700 */
+  transition: background-color 0.2s ease;
+}
+
+.hoverable-content a:hover {
+  background-color: #f3f4f6;
+  /* Tailwind bg-gray-100 */
+  color: #1d4ed8;
+  /* Tailwind text-blue-700 */
 }
