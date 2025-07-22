@@ -1,7 +1,6 @@
 "use client";
 
 import { useState } from "react";
-import Nav from "../../../components/Nav";
 
 const emails = [
   {
@@ -67,7 +66,6 @@ export default function PhishingSimulator() {
 
   return (
     <>
-      <Nav showFilters={false} />
       <main className="max-w-5xl mx-auto py-12 px-6 min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
         <h1 className="text-4xl font-bold text-center text-blue-800 mb-10">
           Phishing Email Simulator
@@ -86,21 +84,19 @@ export default function PhishingSimulator() {
                 <div className="flex gap-4">
                   <button
                     onClick={() => handleChoice(email.id, true)}
-                    className={`px-4 py-2 rounded-full text-sm font-medium ${
-                      answers[email.id] === true
+                    className={`px-4 py-2 rounded-full text-sm font-medium ${answers[email.id] === true
                         ? "bg-red-600 text-white"
                         : "bg-gray-100 text-gray-800 hover:bg-red-100"
-                    }`}
+                      }`}
                   >
                     Report as Phishing
                   </button>
                   <button
                     onClick={() => handleChoice(email.id, false)}
-                    className={`px-4 py-2 rounded-full text-sm font-medium ${
-                      answers[email.id] === false
+                    className={`px-4 py-2 rounded-full text-sm font-medium ${answers[email.id] === false
                         ? "bg-green-600 text-white"
                         : "bg-gray-100 text-gray-800 hover:bg-green-100"
-                    }`}
+                      }`}
                   >
                     Mark as Safe
                   </button>

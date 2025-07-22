@@ -1,7 +1,5 @@
 "use client";
 
-import Nav from "../../../components/Nav";
-
 const vpnData = [
   {
     name: "NordVPN",
@@ -44,7 +42,6 @@ const vpnData = [
 export default function VPNComparison() {
   return (
     <>
-      <Nav showFilters={false} />
       <main className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100 py-12 px-6">
         <div className="max-w-6xl mx-auto">
           <h1 className="text-4xl font-bold text-blue-800 mb-8 text-center">
