@@ -1,7 +1,6 @@
 "use client";
 
 import { useState } from "react";
-import Nav from "../../../components/Nav";
 
 const emails = [
   {
@@ -67,7 +66,6 @@ export default function PhishingSimulator() {
 
   return (
     <>
-      <Nav showFilters={false} />
       <main className="max-w-5xl mx-auto py-12 px-6 min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
         <h1 className="text-4xl font-bold text-center text-blue-800 mb-10">
           Phishing Email Simulator
